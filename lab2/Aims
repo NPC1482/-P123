@@ -1,0 +1,20 @@
+public class Aims {
+    public static void main(String[] args) {
+        System.out.println("AIMS Project");
+
+        Cart cart = new Cart();
+
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("Lion King");
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Aladdin");
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Batman");
+        DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Lion King", "Animation", 19.95f);
+
+
+        cart.addDigitalVideoDisc(dvd1);
+        cart.addDigitalVideoDisc(dvd2);
+        cart.addDigitalVideoDisc(dvd3);
+        cart.addDigitalVideoDisc(dvd4);
+
+        System.out.println("Total cost: " + cart.totalCost());
+    }
+}
