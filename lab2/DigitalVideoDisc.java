@@ -1,0 +1,29 @@
+public class DigitalVideoDisc {
+    private String title;
+    private String category;
+    private String director;
+    private int length;
+    private float cost;
+
+    public DigitalVideoDisc(String title, String category, float cost) {
+        this.title = title;
+        this.category = category;
+        this.cost = cost;
+    }
+
+    public DigitalVideoDisc(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public float getCost() {
+        return cost;
+    }
+}
