@@ -1,20 +1,14 @@
 package hust.soict.dsai.aims.media;
 
-public abstract class Media {
-    private final int id;
+public abstract class Media implements Comparable<Media>{
     private final String title;
     private final String category;
     private final float cost;
 
-    public Media(int id, String title, String category, float cost) {
-        this.id = id;
+    public Media(String title, String category, float cost) {
         this.title = title;
         this.category = category;
         this.cost = cost;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getTitle() {
@@ -32,5 +26,16 @@ public abstract class Media {
     @Override
     public String toString() {
         return title + " - " + category + " - " + cost + " $";
+    }
+
+    @Override
+    public int compareTo(Media other) {
+        int titleCompare =
+                this.getTitle().compareTo(other.getTitle());
+
+        if (titleCompare != 0)
+            return titleCompare;
+
+        return Float.compare(this.getCost(), other.getCost());
     }
 }
